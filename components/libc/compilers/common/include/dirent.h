@@ -68,6 +68,7 @@ struct dirent
 #ifdef RT_USING_MUSLLIBC
 typedef uint64_t ino_t;
 #endif
+typedef uint64_t ino_t;
 struct libc_dirent {
     ino_t d_ino;
     off_t d_off;
