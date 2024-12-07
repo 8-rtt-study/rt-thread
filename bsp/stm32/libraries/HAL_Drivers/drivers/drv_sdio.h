@@ -32,7 +32,7 @@
 #define SDCARD_INSTANCE                   SDMMC1
 #endif /*  defined(SOC_SERIES_STM32F1) || defined(SOC_SERIES_STM32F4) */
 
-#define SDIO_BUFF_SIZE       4096
+#define SDIO_BUFF_SIZE       (1024U * 10)
 #define SDIO_ALIGN_LEN       32
 
 #ifndef SDIO_MAX_FREQ
@@ -56,7 +56,7 @@
 #endif
 
 #ifndef SDIO_MAX_FREQ
-#define SDIO_MAX_FREQ        (24 * 1000 * 1000)
+#define SDIO_MAX_FREQ        (48 * 1000 * 1000)
 #endif
 
 #define HW_SDIO_IT_CCRCFAIL                    (0x01U << 0)
