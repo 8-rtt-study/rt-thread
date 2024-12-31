@@ -393,8 +393,8 @@ const struct fal_flash_dev stm32_onchip_flash_64k =
 {
     "onchip_flash_64k",
     STM32_FLASH_START_ADRESS_64K,
-    FLASH_SIZE_GRANULARITY_64K,
-    (64 * 1024),
+    FLASH_SIZE_64K,
+    FLASH_SIZE_GRANULARITY_16K,
     {
         NULL,
         fal_flash_read_64k,
@@ -407,8 +407,8 @@ const struct fal_flash_dev stm32_onchip_flash_128k =
 {
     "onchip_flash_128k",
     STM32_FLASH_START_ADRESS_128K,
-    FLASH_SIZE_GRANULARITY_128K,
-    (128 * 1024),
+    FLASH_SIZE_128K,
+    FLASH_SIZE_GRANULARITY_16K,
     {
         NULL,
         fal_flash_read_128k,
