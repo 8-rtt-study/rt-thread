@@ -508,6 +508,13 @@ static rt_ssize_t spixfer(struct rt_spi_device *device, struct rt_spi_message *m
 #else
             rt_free(dma_aligned_buffer);
 #endif /* SOC_SERIES_STM32H7 || SOC_SERIES_STM32F7 */
+        } else {
+            if ((spi_drv->spi_dma_flag & SPI_USING_TX_DMA_FLAG) && (spi_drv->spi_dma_flag & SPI_USING_RX_DMA_FLAG) &&
+                (send_length >= DMA_TRANS_MIN_LEN)) {
+                if (recv_buf != RT_NULL) {
+                    rt_memcpy(recv_buf, p_txrx_buffer, send_length);
+                }
+            }
         }
     }
 
