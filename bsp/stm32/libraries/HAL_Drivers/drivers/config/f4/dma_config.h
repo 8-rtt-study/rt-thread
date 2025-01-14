@@ -169,12 +169,12 @@ extern "C" {
 #define I2C1_TX_DMA_INSTANCE            DMA1_Stream6
 #define I2C1_TX_DMA_CHANNEL             DMA_CHANNEL_1
 #define I2C1_TX_DMA_IRQ                 DMA1_Stream6_IRQn
-#elif defined(BSP_UART2_TX_USING_DMA) && !defined(UART2_TX_DMA_INSTANCE)
-#define UART2_DMA_TX_IRQHandler          DMA1_Stream6_IRQHandler
-#define UART2_TX_DMA_RCC                 RCC_AHB1ENR_DMA1EN
-#define UART2_TX_DMA_INSTANCE            DMA1_Stream6
-#define UART2_TX_DMA_CHANNEL             DMA_CHANNEL_4
-#define UART2_TX_DMA_IRQ                 DMA1_Stream6_IRQn
+#elif defined(BSP_ADC1_USING_DMA) && !defined(ADC1_DMA_INSTANCE)
+#define ADC1_DMA_IRQHandler              DMA1_Stream6_IRQHandler
+#define ADC1_DMA_RCC                     RCC_AHB1ENR_DMA1EN
+#define ADC1_DMA_INSTANCE                DMA1_Stream6
+#define ADC1_DMA_CHANNEL                 DMA_CHANNEL_4
+#define ADC1_DMA_IRQ                     DMA1_Stream6_IRQn
 #elif defined(BSP_UART8_RX_USING_DMA) && !defined(UART8_RX_DMA_INSTANCE)
 #define UART8_DMA_RX_IRQHandler          DMA1_Stream6_IRQHandler
 #define UART8_RX_DMA_RCC                 RCC_AHB1ENR_DMA1EN
@@ -211,12 +211,12 @@ extern "C" {
 #endif
 
 /* DMA2 stream0 */
-#if defined(BSP_ADC1_USING_DMA) && !defined(ADC1_DMA_INSTANCE)
-#define ADC1_DMA_IRQHandler           DMA2_Stream0_IRQHandler
-#define ADC1_DMA_RCC                  RCC_AHB1ENR_DMA2EN
-#define ADC1_DMA_INSTANCE             DMA2_Stream0
-#define ADC1_DMA_CHANNEL              DMA_CHANNEL_0
-#define ADC1_DMA_IRQ                  DMA2_Stream0_IRQn
+#if defined(BSP_UART2_TX_USING_DMA) && !defined(UART2_TX_DMA_INSTANCE)
+#define UART2_DMA_TX_IRQHandler          DMA2_Stream0_IRQHandler
+#define UART2_TX_DMA_RCC                 RCC_AHB1ENR_DMA2EN
+#define UART2_TX_DMA_INSTANCE            DMA2_Stream0
+#define UART2_TX_DMA_CHANNEL             DMA_CHANNEL_0
+#define UART2_TX_DMA_IRQ                 DMA2_Stream0_IRQn
 #elif defined(BSP_ADC3_USING_DMA) && !defined(ADC3_DMA_INSTANCE)
 #define ADC3_DMA_IRQHandler           DMA2_Stream0_IRQHandler
 #define ADC3_DMA_RCC                  RCC_AHB1ENR_DMA2EN
